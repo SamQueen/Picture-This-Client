@@ -1,0 +1,197 @@
+.feed-card {
+    position: relative;
+    width: 45%;
+    height: auto;
+    background-color: #fdfbfb;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    font-family: 'Popping', sans-serif;
+}
+
+    .feed-card-delete {
+        position: relative;
+        padding: 32px;
+    }
+
+    .feed-card-delete .delete-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 3em;
+    }
+
+    .feed-card-delete .delete-btn:hover {
+        cursor: pointer;
+    }
+
+    .feed-card-title {
+       height: 8.5vh;
+    }
+
+        .feed-card-profile-image {
+            position: relative;
+            float: left;
+            height: 100%;
+        }
+
+            .feed-card-profile-image img {
+                height: 6vh;
+                padding: 2vh;
+                border-radius: 50px;
+            }
+
+        .feed-card-user-name {
+            position: relative;
+            top: 35%;
+        }
+
+            .feed-card-user-name h4 {
+                font-weight: lighter;
+                font-size: 1.5em;
+            }
+
+    .feed-card-divider {
+        position: relative;
+        margin: 5px auto 0;
+        background-color: rgb(216, 213, 213);
+        color: blue;
+        height: 1px;
+        width: 80%;
+    }
+
+    .feed-card-text {
+        padding: 2% 14%;
+    }
+
+        .feed-card-text p {
+            letter-spacing: 0.1em;
+        }
+
+    .tag-list ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .tag-list ul li {
+        margin-right: 5px;
+    }
+
+    .tag-list ul li a {
+        color: rgb(10, 135, 252);
+        text-decoration: underline;
+    }
+
+    .tag-list ul li a:hover {
+        color: rgb(2, 102, 196);
+        cursor: pointer;
+    }
+
+    .feed-card-image {
+        position: relative;
+    }
+
+        .feed-card-image img {
+            position: relative;
+            width: 95%;
+            background-color: #ffff;
+            margin-left: 2.5%;
+            margin-top: 2%;
+            padding-bottom: 5%;
+            padding-top: 5%;
+            box-shadow: 10px 6px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+        }
+
+    .feed-card-like-section {
+        padding: 5%;
+    }
+
+        .feed-card-like-section h4{
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+
+        #heart-icon {
+            height: 3em;
+        }
+
+        #heart-icon:hover {
+            cursor: pointer;
+        }
+        
+        .show-liked {
+            color: rgb(250, 90, 165);
+        }
+
+        .show-not-liked {
+            color: rgb(146, 143, 144);
+        }
+
+
+    #comment-icon {
+        color: #3b9dd6;
+        position: absolute;
+        right: 10%;
+        height: 3em;
+    }
+
+    #comment-icon:hover {
+        color: #039af1;
+        cursor: pointer;
+    }
+    
+
+/* Comment Section */
+.comment-list {
+    text-align: left;
+    list-style: none;
+}
+
+.comment-list-item {
+    padding: 5px 2px;
+    border-bottom: 1px solid #bdb9b9;
+}
+
+.comment-list-image {
+    max-width: 15%;
+    margin: 5px;
+    float: left;
+}
+
+.comment-list-comment {
+    padding: 10px 0;
+}
+
+.add-comment-section {
+    position: sticky;
+    bottom: 0;
+    padding: 3px;
+    width: 100%;
+}
+
+.add-comment-section textarea {
+    width: 90%;
+    height: 50px;
+}
+
+.add-comment-button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+
+/* Media Queries */
+@media screen and (max-height: 700px) {
+  .feed-card-title {
+       height: 10vh;
+    }
+
+    .feed-card-profile-image img {
+        height: 7vh;
+        border-radius: 360px;
+    }
+}

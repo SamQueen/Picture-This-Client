@@ -1,0 +1,79 @@
+.feed-container {
+    /*background-color: #f4f5f7;*/
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+}
+
+/* Feed create post section */
+.feed-create-post {
+    position: relative;
+    margin: 20px auto 0;
+    width: fit-content;
+}
+
+.feed-create-post ul {
+    display: flex;
+    list-style: none;
+}
+
+.feed-create-post ul li {
+    margin: 0 25px;
+}
+
+
+/* Feed */
+.feed {
+    position: relative;
+    width: 100%;
+}
+
+/* Feed add photo popup */
+.feed-add-photo {
+    text-align: center;
+}
+
+/* Add album table */
+.album-table {
+    margin: 20px auto;
+}
+
+.album-table input {
+    margin-left: 10px;
+}
+
+
+/* Top user popup */
+.top-users-popup h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.top-user-table {
+    margin: 0 auto;
+}
+
+
+/* Reccomend friend list */
+.reccomended-friends {
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.reccomended-friends ul{
+    display: flex;
+    list-style: none;
+}
+
+.reccomended-friends ul li {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.reccomend-friend-img {
+    width: fit-content;
+    margin: 0 auto;
+}

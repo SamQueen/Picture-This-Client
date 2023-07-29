@@ -1,0 +1,43 @@
+.album-card {
+    position: relative;
+    width: 45%;
+    height: auto;
+    background-color: #fdfbfb;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    font-family: 'Popping', sans-serif;
+}
+
+.album-card-profile-image {
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+    .album-card-profile-image img {
+        height: 6vh;
+        padding: 2vh;
+        border-radius: 50px;
+    }
+
+.album-card-user-name {
+    position: relative;
+    top: 35%;
+}
+
+    .album-card-user-name h4 {
+        font-weight: lighter;
+        font-size: 1.5em;
+    }
+
+.album-card-divider {
+    position: relative;
+    margin: 5px auto 0;
+    background-color: rgb(216, 213, 213);
+    color: blue;
+    height: 1px;
+    width: 80%;
+}

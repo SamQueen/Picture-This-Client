@@ -1,0 +1,32 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.popup-inner .exit-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3em;
+}
+
+.popup-inner .exit-btn:hover {
+    cursor: pointer;
+}

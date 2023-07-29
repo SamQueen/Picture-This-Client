@@ -1,0 +1,59 @@
+.create-account-screen {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+    .create-account-container {
+    text-align: center;
+    width: 30vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    padding: 5px;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    }
+
+        .create-account-title {
+            padding: 5% 0 10%;
+        }
+
+            .create-account-title h1 {
+                font-weight: 400;
+                font-size: 2.5em;
+                color: #61DBFB;
+            }
+        
+        .create-account-form {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+            .create-account-form input {
+                margin-bottom: 7%;
+                color: #7a7777;
+            }
+
+        .log-in-create-account-button {
+            width: 80%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5%;
+        }
+
+        .create-account-back-button {
+            width: 80%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5%;
+        }

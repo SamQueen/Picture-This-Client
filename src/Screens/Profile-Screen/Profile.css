@@ -1,0 +1,108 @@
+.profile-container {
+    position: relative;
+    /*background-color: #f4f5f7;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+/* profile banner */
+.profile-banner {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+}
+
+    .profile-banner-user {
+        position: relative;
+        height: 40vh;
+        width: 20vw;
+        float: left;
+        text-align: center;
+    }
+
+        .profile-banner-user h4 {
+            margin-top: 20%;
+            margin-bottom: 5%;
+            font-size: 1.8em;
+            font-weight: 400;
+        }
+
+        .profile-photo {
+            width: fit-content;
+            position: relative;
+            margin: 0 auto;
+        }
+
+    .profile-banner-image {
+        position: relative;
+        height: 40vh;
+        width: 60vw;
+        float: left;
+    }
+
+        .profile-banner-image img {
+            height: 40vh;
+            width: 100%;
+            position: relative;
+            border-radius: 10px;
+        }
+
+    .profile-banner-other {
+        height: 40vh;
+        width: 20vw;
+        float: left;
+    }
+
+
+/* change profile window */
+#show-cloud {
+    display: block;
+}
+
+.profile-cloud {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height:100%;
+    z-index: 3;
+    opacity: 0.6;
+    background-color: #f0f2f5;
+    display: none;
+}
+
+.change-profile-photo {
+    position: absolute;
+    top: 15vh;
+    height: 50vh;
+    width: 50vw;
+    background-color: #ffff;
+    z-index: 5;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    text-align: center;
+    display: none; 
+}
+
+    .profile-add-photo-upload {
+        height: 50%;
+    }
+
+    .profile-add-photo-upload input {
+        margin-top: 30%;     
+    }
+
+    .profile-add-photo-submit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+    }
+
+    .profile-add-photo-cancel {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 10px;
+    }

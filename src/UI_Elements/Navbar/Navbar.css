@@ -1,0 +1,112 @@
+/* Feed Navbar */
+.navbar {
+    width: 100vw;
+    height: 82px;
+    background-color: #ffff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+    .navbar-logo{
+        position: relative;
+        width: 8%;
+        height: 100%;
+        float: left;
+    }
+
+    .navbar-logo:hover {
+        cursor: pointer;
+    }
+
+        .navbar-logo img {
+            position: relative;
+            height: 95%;
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+
+    .navbar-search-bar-container {
+        height: 100%;
+        width: 84%;
+        float: left;
+    }
+
+        .nav-drop-container {
+            width: 75%;
+        }
+
+            .navbar-search-bar {
+                width: 50%;
+                height: auto;
+                margin-top: 1.5%;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+            }
+
+            .navbar-search-bar input {
+                margin-right: 15px;
+            }
+
+            .navbar-search-dropdown {
+                position: absolute;
+                background-color: #ffffff;
+                width: 100%;
+                margin-top: 5px;
+                height: 100px;
+                z-index: 5;
+            }
+
+    .navbar-profile {
+        height: 100%;
+    }
+
+        .navbar-profile:hover .navbar-drop-menu {
+            display: block;
+            transform: translateY(0%);
+        }
+
+        .navbar-profile:hover .navbar-profile  {
+            display: none;
+        }
+
+        .navbar-drop-menu {
+            background-color: #ffff;
+            position: absolute;
+            right: 0vw;
+            width: 12vw;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            transform: translateY(-150%);
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+            .navbar-drop-menu ul li {
+                padding: 10px;
+                list-style: none;
+                font-size: 1.5em;
+                border-bottom: 1px solid #d4cdcd;
+            }
+
+            .navbar-drop-menu ul li:hover {
+                background-color: #f1f1f1;
+                transition: 0.5s;
+            }
+
+    .row3 {
+        width:  20%; 
+    }
+
+/* Popups */
+.friend-list h1 {
+    text-align: center;
+}
+
+.friend-list-table {
+    margin: 0 auto;
+}
+
+.friend-list-table td {
+    text-align: center;
+    width: 33%;
+}
