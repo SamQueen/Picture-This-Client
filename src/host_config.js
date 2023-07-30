@@ -7,4 +7,4 @@ let network_path = "http://192.168.0.200:5000"
 
 
 // change this to desired path
-export let conn_path = host_path;
+export let conn_path = local_path;

@@ -17,6 +17,7 @@ export function Navbar(props) {
     const [potentialFriends, setPotentialFriends] = useState([]);
     const [matchingFriends, setMatchingFriends] = useState([]);
     const [showFriendSearch, setShowFriendSearch] = useState(false);
+    const [showInfo, setShowInfo] = useState(false);
 
     // makes the date look pretty
     function formatDate (d) {
@@ -135,6 +136,16 @@ export function Navbar(props) {
                 </div>
             </Popup>
 
+            <Popup trigger={showInfo} setTrigger={setShowInfo}>
+                <h1>Info</h1>
+                
+                <h2>Front End</h2>
+                <p>This app was created using react for the front-end. This part of the project is hosted on Netlify.</p>
+                
+                <h3>Back End</h3>
+                <p>The backend was made using nodejs, express, and mysql. Both the server and the database are being hosted using Heroku.</p>
+            </Popup>
+
             <div onClick={goToFeed} className='navbar-logo'>
                 <img src={require('../../Images/logo2.png')} />
             </div>
@@ -188,7 +199,12 @@ export function Navbar(props) {
                                 onPress={() => {setShowAllFriendList(true); getFriendList();}}
                             />
                         </li>
-                        <li><CustomButton title="Help"/></li>
+                        <li>
+                            <CustomButton 
+                                title="Info"
+                                onPress={() => {setShowInfo(true)}}
+                            />
+                        </li>
                         <li><CustomButton title="Settings"/></li>
                         <li>
                             <CustomButton 

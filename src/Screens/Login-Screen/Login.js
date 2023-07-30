@@ -12,10 +12,10 @@ export function Login({navigation}) {
     const[username, setName] = useState("");
     const[password, setPassword] = useState("");
 
-    axios.defaults.withCredentials = true;
+    //axios.defaults.withCredentials = true;
 
     // check if session already exists
-    useEffect(() => {
+    /*useEffect(() => {
         axios.get('/session')
         .then(res => {
             if (res.data.valid === true) {
@@ -25,7 +25,7 @@ export function Login({navigation}) {
             }
         })
         .catch(err => console.log(err))
-    }, []);
+    }, []);*/
 
     // send data to server. If the user exists in DB then success response is sent.
     const login = () => {
@@ -38,11 +38,9 @@ export function Login({navigation}) {
             username: username,
             password: password
         }).then((response) =>{
-            console.log(response.data);
             // if response from server is "succuess" navigate to feed
             if (response.data.login === true) {
                 navigation.navigate('Feed');
-                console.log(response.data);
             } else {
                 toast.error('There was a problem logging in. Please check credentials.', {
                     position: "top-center",
@@ -55,11 +53,17 @@ export function Login({navigation}) {
                     theme: "colored",
                 });
             }
-        });
+        })
+        .catch();
     }
 
     return (
         <div className='login-screen-container'>
+            
+            <div className="info">
+                <p>Hello! This is my react project. To check it out use the username "lufi" and password "lufi" or feel free to make and account.</p>
+            </div>
+            
             <div className="login-container">
 
                 <div className='title-container'>

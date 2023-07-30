@@ -107,7 +107,7 @@ export function Profile() {
                 </div>  
 
                 <div className='profile-banner-image'>
-                   <img src={require('../../Images/city.jpg')} /> 
+                   <img src={require('../../Images/singapore.jpg')} /> 
                 </div>
 
                 <div className='profile-banner-other'>

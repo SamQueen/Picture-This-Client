@@ -227,12 +227,11 @@ export function Feed({navigation}) {
 
         <div className='reccomended-friends'>
           <ul>
-            {reccomendedFriends.map((friend) => (
-              
-              <li>
+            {reccomendedFriends.map((friend, index) => (
+              <li key={index}>
                 <div className='friend-card'>
                   <div className='reccomend-friend-img'>
-                    <td><Image style={styles.profile_photo}  source={{uri: friend.profile_photo}} /></td>
+                    <Image style={styles.profile_photo}  source={{uri: friend.profile_photo}} />
                   </div>
                   
                   <h3>{friend.first_name + ' ' + friend.last_name}</h3>
@@ -247,9 +246,9 @@ export function Feed({navigation}) {
 
 
         <div className="feed">
-          {posts.slice(0).reverse().map((post) => (
+          {posts.slice(0).reverse().map((post, index) => (
             <FeedCard
-              key={Math.random()}
+              key={index}
               post={post}
               setPosts = {setPosts}
               renderTrigger={setRenderPosts}

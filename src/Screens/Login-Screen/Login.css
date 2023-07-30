@@ -1,3 +1,8 @@
+.info {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .login-screen-container {
     background: #f0f2f5;
     /*background-image: linear-gradient(to right, #00dfc4 , #2bbd63); */
@@ -13,7 +18,7 @@
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 13vh;
+    margin-top: 10vh;
     padding: 5px;
     background-color: #fafafa;
     border-radius: 0.5rem;
@@ -64,3 +69,10 @@
         border-top: 1px solid #cec8c8;
     }
     
+
+/* Media queries */
+@media screen and (max-width: 950px) {
+    .login-container {
+      width: 55vw;
+    }
+  }
