@@ -22,7 +22,7 @@ export function FeedCard(props) {
     const [commentState, setCommentState] = useState(0);
     const [showEditPopup, setShowEditPopup] = useState(false);
     const [tags, setTags] = useState([{tag: ''}]);
-
+    
     // set profile photo if its null
     if (post.profile_photo === null) {
         post.profile_photo = "no-photo" + ".png";

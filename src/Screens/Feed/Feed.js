@@ -9,7 +9,6 @@ import axios from "axios";
 import {conn_path} from '../../host_config';
 import {Popup} from '../../UI_Elements/Popup/Popup';
 import {ToastContainer, toast} from 'react-toastify';
-import {Input} from '../../UI_Elements/Input/Inputs';
 
 export function Feed({navigation}) {
   const [image, setImage] = useState({preview: '', data: ''});
@@ -20,11 +19,8 @@ export function Feed({navigation}) {
   const [tag, setTag] = useState('');
   const [tagArray, setTagArray] = useState('');
   const [renderPosts, setRenderPosts] = useState(0);
-  const [showSearchTag, setShowSearchTag] = useState(false);
-  const [searchTagName, setSearchTagName] = useState('');
   const [reccomendedFriends, setReccomendedFriends] = useState([]);
   const [triggerReccomendFriend, setTriggerReccomdFriend] = useState(0);
-  const [comments, setComments] = useState('');
   const [likedPhotos, setLikedPhotos] = useState([]);
 
   // get all of the posts
@@ -32,6 +28,7 @@ export function Feed({navigation}) {
       axios.get(conn_path + '/getAllPosts')
       .then(res => {
           setPosts(res.data); 
+          console.log(res.data);
       });
   }, [renderPosts]);
 
@@ -100,39 +97,6 @@ export function Feed({navigation}) {
     setTagArray(newTagArray);
   }
 
-  // search for tag name
-  const searchTag = () => {
-    // if search is empty then load all posts
-    // if else check if request is coming from feed or profile
-    if (searchTagName === '') {
-      axios.get(conn_path + '/tags/getAllPosts')
-      .then(res => {
-        setShowSearchTag(false);
-        setPosts(res.data);  
-      });
-    } else {
-      axios.get(conn_path + '/tags/searchByTag',{
-        params: {tagName: searchTagName}
-      })
-      .then(res => {
-        setPosts(res.data); 
-        setShowSearchTag(false);
-        setSearchTagName('');
-      });
-    }
-  }
-
-  // get posts with the most popular tags
-  const getPopularTags = () => {
-    axios.get(conn_path + '/tags/getPopularTags')
-    .then(res => {
-      setPosts(res.data); 
-      setShowSearchTag(false);
-      setSearchTagName('');
-    });
-  }
-
-
   // send friend request
   const addFriend = (user_id) => {
 
@@ -190,17 +154,6 @@ export function Feed({navigation}) {
           </div>
         </Popup>
 
-
-        {/* Search Tag popup */}
-        <Popup trigger={showSearchTag} setTrigger={setShowSearchTag}>
-          <input 
-            placeholder='Enter Tag Name' 
-            onChange={(e) => setSearchTagName(e.target.value)}
-        />
-        
-          <button onClick={searchTag}>Seach Tag</button>
-        </Popup>
-
         <div className='feed-create-post'>
             <ul>
               <li>
@@ -246,9 +199,9 @@ export function Feed({navigation}) {
 
 
         <div className="feed">
-          {posts.slice(0).reverse().map((post, index) => (
+          {posts.slice(0).reverse().map((post) => (
             <FeedCard
-              key={index}
+              key={Math.random()}
               post={post}
               setPosts = {setPosts}
               renderTrigger={setRenderPosts}
